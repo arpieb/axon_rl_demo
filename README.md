@@ -34,7 +34,7 @@ Note that some systems don't have Python3 installed as `python3` so use whicheve
 
 Once the server is up and running on your local (so you can see the agent playing CartPole-v1), run the Annex RL Demo agent!
 
-### Annex RL Demo
+### Axon RL Demo
 
 The usual suspects: clone, get deps, run:
 
