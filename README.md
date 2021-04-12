@@ -21,10 +21,10 @@ be found at [https://hexdocs.pm/axon_rl_demo](https://hexdocs.pm/axon_rl_demo).
 
 ### OpenAI Gym server
 
-This requires an OpenAI Gym server to be running, using the Python package from the [gym-http-server](https://github.com/saravanabalagi/gym-http-server) repo.  The file `requirements.py3` in this repo's root contains the pip dependencies to create and run the server.  Using virtualenv:
+This requires an OpenAI Gym server to be running, using the **Python3** package from the [gym-http-server](https://github.com/saravanabalagi/gym-http-server) repo.  The file `requirements.py3` in this repo's root contains the pip dependencies to create and run the server.  Using virtualenv:
 
 ```bash
-virtualenv ENV -p `which python3`
+python3 -m venv ENV
 . ENV/bin/activate
 pip install -r requirements.py3
 gym-http-server
@@ -42,4 +42,3 @@ The usual suspects: clone, get deps, run:
 mix deps.get
 mix run -e "AxonRLDemo.run()"
 ```
-# axon_rl_demo
