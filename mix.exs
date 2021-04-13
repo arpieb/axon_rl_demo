@@ -14,7 +14,7 @@ defmodule AxonRLDemo.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:logger, :xmerl]
     ]
   end
 
@@ -28,7 +28,7 @@ defmodule AxonRLDemo.MixProject do
       {:deque, "~> 1.2"},
 
       {:axon, "~> 0.1.0-dev", git: "git@github.com:elixir-nx/axon.git", override: true},
-      #{:exla, "~> 0.1.0-dev", git: "git@github.com:elixir-nx/nx", sparse: "exla", override: true},
+      {:exla, "~> 0.1.0-dev", git: "git@github.com:elixir-nx/nx", sparse: "exla", override: true},
       {:nx, "~> 0.1.0-dev", git: "git@github.com:elixir-nx/nx", sparse: "nx", override: true},
     ]
   end

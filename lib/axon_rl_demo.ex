@@ -9,11 +9,21 @@ defmodule AxonRLDemo do
 
   def run() do
     env = create_env("CartPole-v1")
-#    env = create_env("LunarLander-v2")
+    # env = create_env("LunarLander-v2")
     num_actions = action_space(env) |> IO.inspect() |> Map.get(:n)
     num_states = GymClient.observation_space(env) |> IO.inspect() |> Map.fetch!(:shape) |> hd()
-    agent = GymAgent.new(num_states: num_states, num_actions: num_actions, eps: 0.25, eps_decay: 0.995, gamma: 0.99)
-#    exit(:normal)
+    high = GymClient.observation_space(env) |> Map.fetch!(:high)
+    low = GymClient.observation_space(env) |> Map.fetch!(:low)
+    state_norms = low
+    |> Enum.zip(high)
+    |> Enum.map(fn {l, h} -> max(abs(l), abs(h)) end)
+    |> IO.inspect()
+
+    agent = GymAgent.new(
+      num_states: num_states,
+      state_norms: state_norms,
+      num_actions: num_actions,
+    )
     run_experiment(agent, env, @max_episodes)
   end
 
