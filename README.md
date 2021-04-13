@@ -1,6 +1,6 @@
 # AxonRLDemo
 
-Quick-n-Dirty&tm; RL demo running against an OpenAI Gym server, built using:
+Quick-n-Dirty™ RL demo running against an OpenAI Gym server, built using:
 
 - [Elixir](https://elixir-lang.org/)
 - [Nx](https://github.com/elixir-nx/nx)
