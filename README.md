@@ -6,7 +6,7 @@ Quick-n-Dirty™ RL demo running against an OpenAI Gym server, built using:
 - [Nx](https://github.com/elixir-nx/nx)
 - [Axon](https://github.com/elixir-nx/axon)
 
-- Video of training run with CartPole v1 [available](https://youtu.be/DsmE0VQgc5E).
+Video of training run with CartPole v1 [available](https://youtu.be/DsmE0VQgc5E).
 
 ## Installation
 
